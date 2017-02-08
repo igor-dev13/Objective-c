@@ -37,7 +37,6 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"hello");
     return self.arrayEvents.count;
 }
 
@@ -51,7 +50,7 @@
         [self.arrayEvents addObject:[NSString stringWithFormat:@"%d",i]];
     }    
     
-    NSLog(@"%lu", (unsigned long)self.arrayEvents.count);
+    // NSLog(@"%lu", (unsigned long)self.arrayEvents.count);
 }
 
 

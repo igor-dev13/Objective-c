@@ -28,7 +28,7 @@
     
     self.viewValue.text = self.tableRowValue;
     
-    NSLog(@"%@", self.tableRowValue);
+    // NSLog(@"%@", self.tableRowValue);
 }
 
 
