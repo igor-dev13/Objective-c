@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController<UITableViewDelegate>
+@class DetailViewController;
 
-@property (nonatomic, strong) NSString * tableRowValue;
-
-
+@protocol DataRowDelegate <NSObject>
+- (void) setPageValue: (DetailViewController*) sender;
 @end
 
+@interface DetailViewController : UIViewController<UITableViewDelegate>
+@property (nonatomic, weak) id <DataRowDelegate> delegate;
+@property (nonatomic, strong) UILabel * dataLabel;
+@end

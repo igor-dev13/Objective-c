@@ -7,28 +7,43 @@
 //
 
 #import "DetailViewController.h"
+#import "MainTableViewController.h"
 
 @interface DetailViewController ()
-
-
-
-@property (weak, nonatomic) IBOutlet UILabel *viewValue;
-
-
-
 @end
 
 @implementation DetailViewController
 
-@synthesize tableRowValue;
+@synthesize dataLabel;
+@synthesize delegate;
+
+/*-(void) CreateMainTableViewController
+{
+    MainTableViewController *myMainTableViewController = [[MainTableViewController alloc]];
+    //..... push second controller into navigation stack
+    myMainTableViewController.delegate = self ;
+    [myMainTableViewController release];
+}*/
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.viewValue.text = self.tableRowValue;
+    // UILabel* label = [[UILabel alloc] initWithFrame:self.view.frame];
+    dataLabel = [[UILabel alloc] initWithFrame:self.view.frame];
     
-    // NSLog(@"%@", self.tableRowValue);
+    [self.delegate setPageValue:self];
+    
+    dataLabel.font = [UIFont systemFontOfSize:36];
+    dataLabel.textAlignment = NSTextAlignmentCenter;
+    dataLabel.textColor = [UIColor whiteColor];
+    
+    UIView* overlayView = [[UIView alloc] initWithFrame:self.view.frame];
+    overlayView.backgroundColor = [UIColor blueColor];
+    overlayView.maskView = dataLabel;
+    [self.view addSubview:overlayView];
 }
 
 

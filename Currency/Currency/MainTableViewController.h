@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailViewController.h"
 
-@interface MainTableViewController : UITableViewController
-
-
+@interface MainTableViewController : UITableViewController <DataRowDelegate>
+@property (nonatomic, strong) NSString * currentText;
 @end

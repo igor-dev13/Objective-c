@@ -18,6 +18,10 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
+<<<<<<< HEAD
+    self.backgroundColor = [UIColor greenColor];
+=======
+>>>>>>> e372e93d7f26f0c63d89dd059c4d82c9b35bef95
     // Configure the view for the selected state
 }
 

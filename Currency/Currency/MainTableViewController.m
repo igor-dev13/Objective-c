@@ -8,14 +8,19 @@
 
 #import "MainTableViewController.h"
 #import "DetailViewController.h"
+#import "MyTableVIewCell.h"
 
 @interface MainTableViewController ()
-
 @property (nonatomic, strong) NSMutableArray * arrayEvents;
-
 @end
 
 @implementation MainTableViewController
+
+@synthesize currentText;
+
+- (void) setPageValue: (DetailViewController*) sender;{
+    sender.dataLabel.text = self.currentText;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,6 +30,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.arrayEvents = [[NSMutableArray alloc] init];
+    for (int i=0; i < 10; i++)
+    {
+        [self.arrayEvents addObject:[NSString stringWithFormat:@"%d",i]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,46 +45,32 @@
 
 #pragma mark - Table view data source
 
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.arrayEvents.count;
-}
-
-- (void) viewWillAppear:(BOOL)animated {
-    // self.arrayEvents = [[NSMutableArray alloc] initWithObjects:@"123", @"222", @"333", nil];
-    
-    
-    self.arrayEvents = [[NSMutableArray alloc] init];
-    for (int i=1; i < 11; i++)
-    {
-        [self.arrayEvents addObject:[NSString stringWithFormat:@"%d",i]];
-    }    
-    
-    // NSLog(@"%lu", (unsigned long)self.arrayEvents.count);
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSString * identifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    [self.tableView registerClass:[MyTableViewCell class] forCellReuseIdentifier:NSStringFromClass([MyTableViewCell class])];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([MyTableViewCell class]) forIndexPath:indexPath];    
     
     NSString * content = [self.arrayEvents objectAtIndex:indexPath.row];
-    
     cell.textLabel.text = content;
-    // Configure the cell...
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //[tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    DetailViewController * detailView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailView"];
+    //DetailViewController * detailView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailView"];
+    // detailView.tableRowValue = [self.arrayEvents objectAtIndex:indexPath.row];
+    // [delegate setLabelValue:test];
     
-    detailView.tableRowValue = [self.arrayEvents objectAtIndex:indexPath.row];
+    DetailViewController * detailView = [[DetailViewController alloc] init];
+    self.currentText = [self.arrayEvents objectAtIndex:indexPath.row];
+    detailView.delegate = self;
     
     [self.navigationController pushViewController:detailView animated:YES];
 }

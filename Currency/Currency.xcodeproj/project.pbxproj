@@ -16,6 +16,7 @@
 		8401236C1E4A4D9900D7063E /* CurrencyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401236B1E4A4D9900D7063E /* CurrencyTests.m */; };
 		840123771E4A4D9900D7063E /* CurrencyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 840123761E4A4D9900D7063E /* CurrencyUITests.m */; };
 		840123861E4A554E00D7063E /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840123851E4A554E00D7063E /* MainTableViewController.m */; };
+		84DEFDA41E4D0D46001ADE3A /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DEFDA31E4D0D46001ADE3A /* MyTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		840123781E4A4D9900D7063E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840123841E4A554E00D7063E /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		840123851E4A554E00D7063E /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		84DEFDA21E4D0D46001ADE3A /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		84DEFDA31E4D0D46001ADE3A /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				840123511E4A4D9900D7063E /* Supporting Files */,
 				840123841E4A554E00D7063E /* MainTableViewController.h */,
 				840123851E4A554E00D7063E /* MainTableViewController.m */,
+				84DEFDA21E4D0D46001ADE3A /* MyTableViewCell.h */,
+				84DEFDA31E4D0D46001ADE3A /* MyTableViewCell.m */,
 			);
 			path = Currency;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				840123591E4A4D9900D7063E /* DetailViewController.m in Sources */,
 				840123561E4A4D9900D7063E /* AppDelegate.m in Sources */,
 				840123531E4A4D9900D7063E /* main.m in Sources */,
+				84DEFDA41E4D0D46001ADE3A /* MyTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +517,7 @@
 				8401237D1E4A4D9900D7063E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8401237E1E4A4D9900D7063E /* Build configuration list for PBXNativeTarget "CurrencyTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +526,7 @@
 				840123801E4A4D9900D7063E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		840123811E4A4D9900D7063E /* Build configuration list for PBXNativeTarget "CurrencyUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +535,7 @@
 				840123831E4A4D9900D7063E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
