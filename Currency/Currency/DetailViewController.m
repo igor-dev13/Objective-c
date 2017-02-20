@@ -14,9 +14,6 @@
 
 @implementation DetailViewController
 
-@synthesize dataLabel;
-@synthesize delegate;
-
 /*-(void) CreateMainTableViewController
 {
     MainTableViewController *myMainTableViewController = [[MainTableViewController alloc]];
@@ -31,29 +28,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    // UILabel* label = [[UILabel alloc] initWithFrame:self.view.frame];
-    dataLabel = [[UILabel alloc] initWithFrame:self.view.frame];
+    self.textLabel = [[UILabel alloc] initWithFrame:self.view.frame];
     
     [self.delegate setPageValue:self];
     
-    dataLabel.font = [UIFont systemFontOfSize:36];
-    dataLabel.textAlignment = NSTextAlignmentCenter;
-    dataLabel.textColor = [UIColor whiteColor];
+    self.textLabel.font = [UIFont systemFontOfSize:36];
+    self.textLabel.textAlignment = NSTextAlignmentCenter;
+    self.textLabel.textColor = [UIColor whiteColor];
     
     UIView* overlayView = [[UIView alloc] initWithFrame:self.view.frame];
     overlayView.backgroundColor = [UIColor blueColor];
-    overlayView.maskView = dataLabel;
-    [self.view addSubview:overlayView];
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    overlayView.maskView = self.textLabel;
+    [self.view addSubview:overlayView];
 }
 
 @end

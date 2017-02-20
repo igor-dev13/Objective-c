@@ -11,10 +11,14 @@
 @class DetailViewController;
 
 @protocol DataRowDelegate <NSObject>
-- (void) setPageValue: (DetailViewController*) sender;
+
+- (void)setPageValue: (nonnull DetailViewController *) sender;
+
 @end
 
 @interface DetailViewController : UIViewController<UITableViewDelegate>
-@property (nonatomic, weak) id <DataRowDelegate> delegate;
-@property (nonatomic, strong) UILabel * dataLabel;
+
+@property (nullable, nonatomic, weak) id <DataRowDelegate> delegate;
+@property (nonnull, nonatomic, strong) UILabel * textLabel;
+
 @end

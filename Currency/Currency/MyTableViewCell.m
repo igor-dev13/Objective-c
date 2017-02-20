@@ -12,17 +12,24 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
+
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    self.textLabel.text = @"";
+}
+
+//- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+//    
+//    self = [super initWithStyle:Style reuseIdentifier:reuseIdentifier];
+//    
+//    if (self) { self.backgroundColor = [UIColor greenColor]; } return self;
+//}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-<<<<<<< HEAD
-    self.backgroundColor = [UIColor greenColor];
-=======
->>>>>>> e372e93d7f26f0c63d89dd059c4d82c9b35bef95
-    // Configure the view for the selected state
 }
+
+
 
 @end

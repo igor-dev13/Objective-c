@@ -10,5 +10,7 @@
 #import "DetailViewController.h"
 
 @interface MainTableViewController : UITableViewController <DataRowDelegate>
-@property (nonatomic, strong) NSString * currentText;
+
+@property (nonnull, nonatomic, strong) NSString * currentText;
+
 @end
