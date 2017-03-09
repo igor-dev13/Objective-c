@@ -10,27 +10,17 @@
 #import "MainTableViewController.h"
 
 @interface DetailViewController ()
+
 @end
 
 @implementation DetailViewController
 
-/*-(void) CreateMainTableViewController
-{
-    MainTableViewController *myMainTableViewController = [[MainTableViewController alloc]];
-    //..... push second controller into navigation stack
-    myMainTableViewController.delegate = self ;
-    [myMainTableViewController release];
-}*/
-
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     self.textLabel = [[UILabel alloc] initWithFrame:self.view.frame];
-    
-    [self.delegate setPageValue:self];
+    self.dataSource = [self.delegate setPageValue:self];
+    self.textLabel.text = self.dataSource;
     
     self.textLabel.font = [UIFont systemFontOfSize:36];
     self.textLabel.textAlignment = NSTextAlignmentCenter;

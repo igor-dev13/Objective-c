@@ -10,26 +10,18 @@
 
 @implementation MyTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
-
 - (void)prepareForReuse {
     [super prepareForReuse];
-    self.textLabel.text = @"";
+    self.currencyLabel.text = @"";
 }
 
-//- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-//    
-//    self = [super initWithStyle:Style reuseIdentifier:reuseIdentifier];
-//    
-//    if (self) { self.backgroundColor = [UIColor greenColor]; } return self;
-//}
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) { self.backgroundColor = [UIColor clearColor]; } return self;
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 }
-
-
 
 @end

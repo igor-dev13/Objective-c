@@ -18,8 +18,8 @@
 
 @implementation MainTableViewController
 
-- (void)setPageValue: (DetailViewController *) sender;{
-    sender.textLabel.text = self.currentText;
+- (NSString *)setPageValue: (DetailViewController *) sender;{
+    return self.currentText;
 }
 
 - (void)viewDidLoad {
@@ -47,12 +47,19 @@
     return self.arrayEvents.count;
 }
 
+- (nullable NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    return indexPath;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([MyTableViewCell class]) forIndexPath:indexPath];
-    NSString * content = [self.arrayEvents objectAtIndex:indexPath.row];
-    cell.textLabel.text = content;
+    MyTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([MyTableViewCell class]) forIndexPath:indexPath];
+    
+    cell.currencyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,cell.frame.size.width,cell.frame.size.height)];
+    cell.currencyLabel.text=[self.arrayEvents objectAtIndex:indexPath.row];
+    cell.currencyLabel.textAlignment = NSTextAlignmentCenter;
+    [cell.contentView addSubview:cell.currencyLabel];
     
     return cell;
 }
@@ -61,10 +68,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     DetailViewController * detailView = [[DetailViewController alloc] init];
-    self.currentText = [self.arrayEvents objectAtIndex:indexPath.row];
     detailView.delegate = self;
     
     [self.navigationController pushViewController:detailView animated:YES];
+    self.currentText = [self.arrayEvents objectAtIndex:indexPath.row];
 }
 
 @end

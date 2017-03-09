@@ -12,5 +12,6 @@
 @interface MainTableViewController : UITableViewController <DataRowDelegate>
 
 @property (nonnull, nonatomic, strong) NSString * currentText;
+@property (nonnull, nonatomic, strong) NSIndexPath * selectedCell;
 
 @end

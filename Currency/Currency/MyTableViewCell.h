@@ -10,4 +10,6 @@
 
 @interface MyTableViewCell : UITableViewCell
 
+@property (nonnull, nonatomic, strong) UILabel * currencyLabel;
+
 @end

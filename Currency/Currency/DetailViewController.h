@@ -12,7 +12,8 @@
 
 @protocol DataRowDelegate <NSObject>
 
-- (void)setPageValue: (nonnull DetailViewController *) sender;
+@optional
+- (nonnull NSString *) setPageValue: (nonnull DetailViewController *) sender;
 
 @end
 
@@ -20,5 +21,6 @@
 
 @property (nullable, nonatomic, weak) id <DataRowDelegate> delegate;
 @property (nonnull, nonatomic, strong) UILabel * textLabel;
+@property (nonnull, nonatomic, strong) NSString * dataSource;
 
 @end
