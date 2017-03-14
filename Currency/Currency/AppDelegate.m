@@ -17,6 +17,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    UITableViewController *tvc = [[MainTableViewController alloc] init];
+    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:tvc];
+    UIViewController *vc = [[UIViewController alloc] init];
+    UITabBarController *tbc = [[UITabBarController alloc] init];
+    tbc.viewControllers = @[navCtrl, vc];
+    self.window.rootViewController = tvc;
+    [self.window makeKeyAndVisible];
+     
+    /*
+    UIWindow *window2 = [[UIWindow alloc] initWithFrame:CGRectMake(0, 80, 320, 320)];
+    window2.backgroundColor = [UIColor whiteColor];
+    window2.windowLevel = UIWindowLevelAlert;
+    self.window2 = window2;
+    [window2 makeKeyAndVisible];
+     */    
+    
     return YES;
 }
 
@@ -46,6 +66,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 @end
