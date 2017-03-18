@@ -7,17 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MyRootViewController.h"
 #import "MainTableViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UINavigationController *navController;
-@property (strong, nonatomic) MyRootViewController *frstVwCntlr;
-@property (strong, nonatomic) MainTableViewController *viewCOntrollerobj;
-
-@property (strong, nonatomic) UIWindow *window2;
-
+@property (strong, nonatomic) UIWindow *window;
 
 @end
-

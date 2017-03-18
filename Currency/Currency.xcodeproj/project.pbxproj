@@ -14,7 +14,6 @@
 		8401236C1E4A4D9900D7063E /* CurrencyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401236B1E4A4D9900D7063E /* CurrencyTests.m */; };
 		840123771E4A4D9900D7063E /* CurrencyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 840123761E4A4D9900D7063E /* CurrencyUITests.m */; };
 		840123861E4A554E00D7063E /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840123851E4A554E00D7063E /* MainTableViewController.m */; };
-		847D99BB1E71D753000FBFA4 /* MyRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847D99BA1E71D753000FBFA4 /* MyRootViewController.m */; };
 		84DD03A91E73518F000E1D05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD03A81E73518F000E1D05 /* AppDelegate.m */; };
 		84DEFDA41E4D0D46001ADE3A /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DEFDA31E4D0D46001ADE3A /* MyTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -52,8 +51,6 @@
 		840123781E4A4D9900D7063E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840123841E4A554E00D7063E /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		840123851E4A554E00D7063E /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
-		847D99B91E71D6C6000FBFA4 /* MyRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRootViewController.h; sourceTree = "<group>"; };
-		847D99BA1E71D753000FBFA4 /* MyRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRootViewController.m; sourceTree = "<group>"; };
 		84DD03A71E735181000E1D05 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84DD03A81E73518F000E1D05 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		84DEFDA21E4D0D46001ADE3A /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
@@ -120,8 +117,6 @@
 				840123851E4A554E00D7063E /* MainTableViewController.m */,
 				84DEFDA21E4D0D46001ADE3A /* MyTableViewCell.h */,
 				84DEFDA31E4D0D46001ADE3A /* MyTableViewCell.m */,
-				847D99B91E71D6C6000FBFA4 /* MyRootViewController.h */,
-				847D99BA1E71D753000FBFA4 /* MyRootViewController.m */,
 			);
 			path = Currency;
 			sourceTree = "<group>";
@@ -287,7 +282,6 @@
 				840123861E4A554E00D7063E /* MainTableViewController.m in Sources */,
 				840123591E4A4D9900D7063E /* DetailViewController.m in Sources */,
 				84DD03A91E73518F000E1D05 /* AppDelegate.m in Sources */,
-				847D99BB1E71D753000FBFA4 /* MyRootViewController.m in Sources */,
 				840123531E4A4D9900D7063E /* main.m in Sources */,
 				84DEFDA41E4D0D46001ADE3A /* MyTableViewCell.m in Sources */,
 			);
